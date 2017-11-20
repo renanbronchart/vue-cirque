@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" style='background: url("static/LeVintage.jpg")'>
+    <div class="card" :style="{backgroundImage: 'url(' + background + ')'}">
       <div class="card__filter">
         <div class="card__infos">
           <h4>{{title}}</h4>

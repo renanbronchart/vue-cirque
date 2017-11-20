@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Le Vintage",
+    "description": "À l'ancienne",
+    "linkName": "Chapiteau",
+    "linkParams": "levintage",
+    "background": "static/LeVintage.jpg"
+  },
+  {
+    "title": "Le Long",
+    "description": "Un très long chapiteau",
+    "linkName": "Chapiteau",
+    "linkParams": "lelong",
+    "background": "static/leLong.jpg"
+  },
+  {
+    "title": "Le Paradis",
+    "description": "Le paradis des chapiteaux",
+    "linkName": "Chapiteau",
+    "linkParams": "leparadis",
+    "background": "static/LeParadis.jpg"
+  },
+  {
+    "title": "New Generation",
+    "description": "La toute nouvelle génération des chapiteaux",
+    "linkName": "Chapiteau",
+    "linkParams": "newgeneration",
+    "background": "static/newGeneration.jpg"
+  },
+  {
+    "title": "Le Zig Zag",
+    "description": "En avant !!",
+    "linkName": "Chapiteau",
+    "linkParams": "zigzag",
+    "background": "static/zigZag.jpg"
+  }
+]
