@@ -81,16 +81,12 @@
     padding-right: 1rem;
     padding-left: 1rem;
   }
-}
 
-@for $i from 1 through $number-columns {
   .col-xs-#{$i} {
     max-width: $percentPerColumn*$i+%;
     flex-basis: $percentPerColumn*$i+%;
   }
-}
 
-@for $i from 1 through $number-columns {
   .col-xs-offset-#{$i} {
     margin-left: $percentPerColumn*$i+%;
   }
@@ -141,22 +137,22 @@
 
 @media (min-width: $screen-sm-min) {
   @for $i from 1 through $number-columns {
+    .col-xs-offset-#{$i} {
+      margin-left: 0;
+    }
+
     .col-sm-#{$i},
     .col-sm-offset-#{$i} {
       flex: 0 0 auto;
       padding-right: 1rem;
       padding-left: 1rem;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-sm-#{$i} {
       max-width: $percentPerColumn*$i+%;
       flex-basis: $percentPerColumn*$i+%;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-sm-offset-#{$i} {
       margin-left: $percentPerColumn*$i+%;
     }
@@ -212,22 +208,22 @@
 
 @media (min-width: $screen-md-min) {
   @for $i from 1 through $number-columns {
+    .col-sm-offset-#{$i} {
+      margin-left: 0;
+    }
+
     .col-md-#{$i},
     .col-md-offset-#{$i} {
       flex: 0 0 auto;
       padding-right: 1rem;
       padding-left: 1rem;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-md-#{$i} {
       max-width: $percentPerColumn*$i+%;
       flex-basis: $percentPerColumn*$i+%;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-md-offset-#{$i} {
       margin-left: $percentPerColumn*$i+%;
     }
@@ -278,28 +274,28 @@
 }
 
 @media (min-width: $screen-lg-min) {
-
   @for $i from 1 through $number-columns {
+    .col-md-offset-#{$i} {
+      margin-left: 0;
+    }
+
     .col-lg-#{$i},
     .col-lg-offset-#{$i} {
       flex: 0 0 auto;
       padding-right: 1rem;
       padding-left: 1rem;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-lg-#{$i} {
       max-width: $percentPerColumn*$i+%;
       flex-basis: $percentPerColumn*$i+%;
     }
-  }
 
-  @for $i from 1 through $number-columns {
     .col-lg-offset-#{$i} {
       margin-left: $percentPerColumn*$i+%;
     }
   }
+
 
   .start-lg {
     justify-content: flex-start;

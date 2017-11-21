@@ -22,7 +22,6 @@
 
 <style scoped='true' lang='scss'>
   .card {
-    width: 25%;
     height: 200px;
     position: relative;
     .card__filter {
