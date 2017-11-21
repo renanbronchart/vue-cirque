@@ -12,7 +12,7 @@
     name: 'chapiteau',
     data () {
       return {
-        card: {},
+        card: {}
       }
     },
     created () {

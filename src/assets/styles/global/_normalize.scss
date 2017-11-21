@@ -1,0 +1,28 @@
+.hidden {
+  display: none;
+
+  &.hidden--xs {
+    @include medium {
+      display: block;
+    }
+  }
+
+  &.hidden--sm {
+    display: block;
+
+    @include medium {
+      display: none;
+    }
+    @include large {
+      display: block;
+    }
+  }
+
+  &.hidden--md {
+    display: block;
+
+    @include large {
+      display: none;
+    }
+  }
+}

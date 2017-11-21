@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import 'stylesheets/style.scss'
+
 export default {
   name: 'app'
 }
