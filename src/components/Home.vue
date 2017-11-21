@@ -3,11 +3,7 @@
     <h3>Choisissez votre chapiteau à louer</h3>
     <Card
       v-for='(card, index) in cards'
-      :title='card.title'
-      :description='card.description'
-      :background='card.background'
-      :linkName='card.linkName'
-      :id='card.id'
+      :card='card'
     >
     </Card>
   </div>

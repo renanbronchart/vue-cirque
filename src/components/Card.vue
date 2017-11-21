@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="card" :style="{backgroundImage: 'url(' + background + ')'}">
+    <div class="card" :style="{backgroundImage: 'url(' + card.background + ')'}">
       <div class="card__filter">
         <div class="card__infos">
-          <h4>{{title}}</h4>
-          <p>{{description}}</p>
-          <router-link :to="{ name: linkName, params: { id: id }}">Voir le chapiteau</router-link>
+          <h4>{{card.title}}</h4>
+          <p>{{card.description}}</p>
+          <router-link :to="{ name: card.linkName, params: { id: card.id }}">Voir le chapiteau</router-link>
         </div>
       </div>
     </div>
@@ -14,8 +14,8 @@
 
 <script>
   export default {
-    name: 'Plop',
-    props: ['title', 'description', 'linkName', 'id', 'background'],
+    name: 'Card',
+    props: ['card'],
     data () {
       return {}
     }
