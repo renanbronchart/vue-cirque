@@ -1,11 +1,11 @@
 <template>
   <div class="card" :style="{backgroundImage: 'url(' + card.background + ')'}">
     <div class="card__filter">
-      <div class="card__infos">
-        <h4>{{card.title}}</h4>
-        <p>{{card.description}}</p>
-        <router-link :to="{ name: card.linkName, params: { id: card.id }}">Voir le chapiteau</router-link>
-      </div>
+    </div>
+    <div class="card__infos">
+      <h4>{{card.title}}</h4>
+      <p>{{card.description}}</p>
+      <router-link :to="{ name: card.linkName, params: { id: card.id }}">Voir le chapiteau</router-link>
     </div>
   </div>
 </template>
@@ -33,21 +33,27 @@
       right: 0;
       background: black;
       opacity: 0;
-      transition: opacity .3s ease-in-out;
+      transition: opacity .25s ease-in-out;
     }
 
     .card__infos {
-      transform: translateX(-20px);
-      transition: all .4s ease-in-out;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all .25s ease-in-out;
+      color: white;
+      a {
+        color: white;
+      }
     }
 
     &:hover {
       .card__filter {
-        opacity: 1;
+        opacity: 0.6;
       }
 
       .card__infos {
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
