@@ -5,7 +5,7 @@
         <div class="card__infos">
           <h4>{{title}}</h4>
           <p>{{description}}</p>
-          <router-link :to="{ name: linkName, params: { id: linkParams }}">Voir le chapiteau</router-link>
+          <router-link :to="{ name: linkName, params: { id: id }}">Voir le chapiteau</router-link>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
 <script>
   export default {
     name: 'Plop',
-    props: ['title', 'description', 'linkName', 'linkParams', 'background'],
+    props: ['title', 'description', 'linkName', 'id', 'background'],
     data () {
       return {}
     }

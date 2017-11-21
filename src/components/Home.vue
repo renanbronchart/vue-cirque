@@ -7,7 +7,7 @@
       :description='card.description'
       :background='card.background'
       :linkName='card.linkName'
-      :linkParams='card.linkParams'
+      :id='card.id'
     >
     </Card>
   </div>
@@ -21,7 +21,6 @@ export default {
   name: 'Home',
   data () {
     return {
-      title: 'Le Vintage',
       cards
     }
   },
