@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h3>Choisissez votre chapiteau à louer</h3>
+    <Header :props='header'></Header>
     <div class="container">
+      <h3>Choisissez votre chapiteau à louer</h3>
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-4 col-lg-3" v-for='(card, index) in cards'>
-          <Card :card='card'>
+        <div class="col-xs-12 col-sm-6" v-for='(card, index) in cards'>
+          <Card :props='card'>
           </Card>
         </div>
       </div>
@@ -13,18 +14,22 @@
 </template>
 
 <script>
-import Card from './Card.vue'
+import Header from '@/components/Header.vue'
+import Card from '@/components/Card.vue'
 import cards from 'store/cards.json'
+import header from 'store/header.json'
 
 export default {
   name: 'Home',
   data () {
     return {
-      cards
+      cards,
+      header
     }
   },
   components: {
-    Card
+    Card,
+    Header
   }
 }
 </script>

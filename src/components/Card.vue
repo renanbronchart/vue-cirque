@@ -1,11 +1,11 @@
 <template>
-  <div class="card" :style="{backgroundImage: 'url(' + card.background + ')'}">
-    <router-link :to="{ name: card.linkName, params: { id: card.id }}" class='card__link'>
+  <div class="card" :style="{backgroundImage: 'url(' + props.background + ')'}">
+    <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link'>
       <div class="card__filter">
       </div>
       <div class="card__infos">
-        <h4>{{card.title}}</h4>
-        <p>{{card.description}}</p>
+        <h4>{{props.title}}</h4>
+        <p>{{props.description}}</p>
       </div>
     </router-link>
   </div>
@@ -14,7 +14,7 @@
 <script>
   export default {
     name: 'Card',
-    props: ['card'],
+    props: ['props'],
     data () {
       return {}
     }
@@ -23,11 +23,15 @@
 
 <style scoped='true' lang='scss'>
   @import '~stylesheets/helpers/_variables.scss';
+  @import '~stylesheets/helpers/mixins/style.scss';
 
   .card {
-    height: 200px;
+    height: 300px;
     position: relative;
     border-radius: $border-radius-xs;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
     transition: all .2s ease-in-out;
@@ -49,7 +53,7 @@
       left: 0;
       right: 0;
       background: black;
-      opacity: 0;
+      opacity: 0.4;
       transition: opacity .25s ease-in-out;
     }
 
@@ -59,20 +63,30 @@
       bottom: 0;
       left: 0;
       color: white;
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 1;
       transition: all .2s ease-in-out;
       padding: 20px;
     }
 
-    &:hover {
-      .card__filter {
-        opacity: 0.6;
+    @include medium {
+      .card__filter,
+      .card__infos {
+        opacity: 0;
       }
 
       .card__infos {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateY(20px);
+      }
+
+      &:hover {
+        .card__filter {
+          opacity: 0.6;
+        }
+
+        .card__infos {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }
