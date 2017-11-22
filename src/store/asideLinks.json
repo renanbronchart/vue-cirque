@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Nos chapiteaux",
+    "links": [
+      {
+        "id": "0",
+        "pageName": "Chapiteau",
+        "titleLink": "Le Vintage",
+        "labelLink": "Le Vintage"
+      },
+      {
+        "id": "1",
+        "pageName": "Chapiteau",
+        "titleLink": "Le Long",
+        "labelLink": "Le Long"
+      },
+      {
+        "id": "2",
+        "pageName": "Chapiteau",
+        "titleLink": "Le paradis",
+        "labelLink": "Le paradis"
+      },
+      {
+        "id": "3",
+        "pageName": "Chapiteau",
+        "titleLink": "New Generation",
+        "labelLink": "New Generation"
+      },
+      {
+        "id": "4",
+        "pageName": "Chapiteau",
+        "titleLink": "Le ZigZag",
+        "labelLink": "Le ZigZag"
+      }
+    ]
+  }
+]

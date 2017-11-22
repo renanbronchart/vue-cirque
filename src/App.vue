@@ -1,18 +1,22 @@
 <template>
   <div id="app">
+    <AsideNav :props='asideLinks'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
     <router-view/>
   </div>
 </template>
 
 <script>
+import asideLinks from 'store/asideLinks.json'
 import 'stylesheets/style.scss'
 import NavHome from '@/components/NavHome.vue'
+import AsideNav from '@/components/AsideNav.vue'
 
 export default {
   name: 'app',
   data () {
     return {
+      asideLinks,
       sideBarOpen: false
     }
   },
@@ -22,7 +26,8 @@ export default {
     }
   },
   components: {
-    NavHome
+    NavHome,
+    AsideNav
   }
 }
 </script>
