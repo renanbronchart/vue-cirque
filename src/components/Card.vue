@@ -1,12 +1,13 @@
 <template>
   <div class="card" :style="{backgroundImage: 'url(' + card.background + ')'}">
-    <div class="card__filter">
-    </div>
-    <div class="card__infos">
-      <h4>{{card.title}}</h4>
-      <p>{{card.description}}</p>
-      <router-link :to="{ name: card.linkName, params: { id: card.id }}">Voir le chapiteau</router-link>
-    </div>
+    <router-link :to="{ name: card.linkName, params: { id: card.id }}" class='card__link'>
+      <div class="card__filter">
+      </div>
+      <div class="card__infos">
+        <h4>{{card.title}}</h4>
+        <p>{{card.description}}</p>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -34,6 +35,13 @@
       box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
       transform: translateY(-8px);
     }
+
+    .card__link {
+      height: 100%;
+      position: relative;
+      display: block;
+    }
+
     .card__filter {
       position: absolute;
       top: 0;
@@ -55,9 +63,6 @@
       transform: translateY(20px);
       transition: all .2s ease-in-out;
       padding: 20px;
-      a {
-        color: white;
-      }
     }
 
     &:hover {
