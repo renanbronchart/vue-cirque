@@ -21,9 +21,19 @@
 </script>
 
 <style scoped='true' lang='scss'>
+  @import '~stylesheets/helpers/_variables.scss';
+
   .card {
     height: 200px;
     position: relative;
+    border-radius: $border-radius-xs;
+    overflow: hidden;
+    box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+    transition: all .2s ease-in-out;
+    &:hover {
+      box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
+      transform: translateY(-8px);
+    }
     .card__filter {
       position: absolute;
       top: 0;
@@ -36,10 +46,15 @@
     }
 
     .card__infos {
-      transform: translateY(20px);
-      opacity: 0;
-      transition: all .25s ease-in-out;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
       color: white;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all .2s ease-in-out;
+      padding: 20px;
       a {
         color: white;
       }
