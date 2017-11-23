@@ -2,8 +2,12 @@
   <div id="app">
     <AsideNav :props='asideLinks' :active='sideBarOpen'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
-    <router-view/>
-    <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
+    <transition name='fade'>
+      <router-view/>
+    </transition>
+    <transition name='fade'>
+      <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
+    </transition>
   </div>
 </template>
 
