@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <AsideNav :props='asideLinks'></AsideNav>
+    <AsideNav :props='asideLinks' :active='sideBarOpen'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
     <router-view/>
+    <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
   </div>
 </template>
 
@@ -23,6 +24,11 @@ export default {
   methods: {
     toggleSideBar (event) {
       this.sideBarOpen = !this.sideBarOpen
+    },
+    closeSideBar (event) {
+      if (this.sideBarOpen) {
+        this.sideBarOpen = false
+      }
     }
   },
   components: {
@@ -33,6 +39,9 @@ export default {
 </script>
 
 <style lang='scss'>
+
+
+
 .nav {
   width: 100%;
   position: fixed;
@@ -42,6 +51,16 @@ export default {
 
 .header {
   margin: 4.5rem 0 0 0;
+}
+
+.filter {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
 }
 
 </style>

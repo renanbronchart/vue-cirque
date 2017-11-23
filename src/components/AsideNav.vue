@@ -1,5 +1,5 @@
 <template>
-  <aside class='aside'>
+  <aside class='aside' :class="{'aside--active': active}">
     <ul class='aside__list'>
       <li class="aside__title">
         <h4>Chapiteau Location</h4>
@@ -19,7 +19,7 @@
 <script>
   export default {
     name: 'AsideNav',
-    props: ['props']
+    props: ['props', 'active']
   }
 </script>
 
@@ -32,7 +32,13 @@
     left: 0;
     background: white;
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
+    transform: translateX(-340px);
+    transition: transform .15s ease-in-out;
     z-index: 10;
+  }
+
+  .aside--active {
+    transform: translateX(0);
   }
 
   .aside__title {
