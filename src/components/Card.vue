@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :style="{backgroundImage: 'url(' + props.background + ')'}">
+  <div class="card" :style="{backgroundImage: 'url(' + imageSrc + ')'}">
     <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link'>
       <div class="card__filter">
       </div>
@@ -16,7 +16,9 @@
     name: 'Card',
     props: ['props'],
     data () {
-      return {}
+      return {
+        imageSrc: `/static/${this.props.background}`
+      }
     }
   }
 </script>

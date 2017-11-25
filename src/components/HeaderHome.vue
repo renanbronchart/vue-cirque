@@ -1,5 +1,5 @@
 <template>
-  <div class="header" :style="{backgroundImage: 'url(' + props.image + ')'}">
+  <div class="header" :style="{backgroundImage: 'url(' + imageSrc + ')'}">
     <div class="header__description container">
       <h1 class='header__title'>{{props.title}}</h1>
       <h2 class='header__subtitle'>{{props.subtitle}}</h2>
@@ -10,7 +10,12 @@
 <script>
   export default {
     name: 'HeaderHome',
-    props: ['props']
+    props: ['props'],
+    data () {
+      return {
+        imageSrc: `/static/${this.props.image}`
+      }
+    }
   }
 </script>
 

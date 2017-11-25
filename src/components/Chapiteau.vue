@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>{{newChapiteau.title}}</h3>
-    <img :src="newChapiteau.background" :alt="altImage">
+    <img :src="imageSrc" :alt="altImage">
   </div>
 </template>
 
@@ -21,6 +21,10 @@
     computed: {
       altImage () {
         return `Chapiteau ${this.newChapiteau.title}`
+      },
+
+      imageSrc () {
+        return `/static/${this.newChapiteau.background}`
       },
 
       newChapiteau () {

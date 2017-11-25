@@ -7,6 +7,8 @@ import Chapiteau from '@/components/Chapiteau'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: '/',
   routes: [
     {
       path: '/',
@@ -17,6 +19,12 @@ export default new Router({
       path: '/chapiteau/:id',
       name: 'Chapiteau',
       component: Chapiteau
+    },
+    {
+      path: '/*',
+      redirect: {
+        name: 'Home'
+      }
     }
   ]
 })
