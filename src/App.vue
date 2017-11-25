@@ -44,17 +44,15 @@ export default {
 
 <style lang='scss'>
 
-
+body {
+  padding: 4.5rem 0 0 0;
+}
 
 .nav {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-.header {
-  margin: 4.5rem 0 0 0;
 }
 
 .filter {
