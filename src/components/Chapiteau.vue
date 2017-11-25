@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h3>{{card.title}}</h3>
-    <img :src="card.background" :alt="altImage">
+    <h3>{{newChapiteau.title}}</h3>
+    <img :src="newChapiteau.background" :alt="altImage">
   </div>
 </template>
 
@@ -16,11 +16,15 @@
       }
     },
     created () {
-      this.card = cards[this.$route.params.id]
+      this.card = this.newChapiteau
     },
     computed: {
       altImage () {
-        return `Chapiteau ${this.card.title}`
+        return `Chapiteau ${this.newChapiteau.title}`
+      },
+
+      newChapiteau () {
+        return cards[this.$route.params.id]
       }
     }
   }
