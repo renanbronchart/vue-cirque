@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class='app'>
     <AsideNav :props='asideLinks' :active='sideBarOpen'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
     <transition name='fade'>
@@ -49,6 +49,13 @@ export default {
 
 body {
   padding: 4.5rem 0 0 0;
+}
+
+.app {
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nav {
