@@ -1,13 +1,31 @@
 <template>
-  <div class='infos'>
+  <div>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-8">
-          <h3 class='infos__title'>{{newChapiteau.title}}</h3>
-          <img :src="imageSrc" :alt="altImage" class='img--responsive infos__image'>
+        <div class="col-xs-12">
+          <router-link :to='{name: "Home"}' class='link__home'>
+            <h4 class='flex flex--center'>
+              <i class="material-icons">arrow_back</i>
+              <span>Voir tous les chapiteaux</span>
+            </h4>
+          </router-link>
         </div>
-        <div class="infos__description">
-          <p>{{newChapiteau.description}}</p>
+      </div>
+    </div>
+    <div class='infos'>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <transition name='fade'>
+              <h3 class='infos__title'>{{newChapiteau.title}}</h3>
+            </transition>
+            <transition name='fade'>
+              <img :src="imageSrc" :alt="altImage" class='img--responsive infos__image'>
+            </transition>
+          </div>
+          <div class="infos__description">
+            <p>{{newChapiteau.description}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -47,9 +65,13 @@
   @import '~stylesheets/helpers/_variables.scss';
   @import '~stylesheets/helpers/mixins/style.scss';
 
-  .infos {
+  .infos,
+  .link__home {
     position: relative;
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
+    @include large {
+      margin: 40px 0 0 0;
+    }
   }
 
   .infos__title {
@@ -57,6 +79,7 @@
   }
 
   .infos__description {
+    padding: 0 1rem;
     margin: 2rem 0 0 0;
     @include large {
       width: 60%;

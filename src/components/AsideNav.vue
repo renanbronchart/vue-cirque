@@ -32,7 +32,7 @@
     left: 0;
     background: white;
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
-    transform: translateX(-340px);
+    transform: translateX(-350px);
     transition: transform .15s ease-in-out;
     z-index: 10;
   }
