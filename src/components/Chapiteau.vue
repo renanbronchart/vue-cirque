@@ -3,12 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <router-link :to='{name: "Home"}' class='link__home'>
-            <h4 class='flex flex--center'>
-              <i class="material-icons">arrow_back</i>
-              <span>Voir tous les chapiteaux</span>
-            </h4>
-          </router-link>
+          <BackTo></BackTo>
         </div>
       </div>
     </div>
@@ -30,6 +25,7 @@
 
 <script>
   import cards from 'store/cards.json'
+  import BackTo from '@/components/BackTo.vue'
 
   export default {
     name: 'chapiteau',
@@ -53,6 +49,9 @@
       newChapiteau () {
         return cards[this.$route.params.id]
       }
+    },
+    components: {
+      BackTo
     }
   }
 </script>
@@ -61,8 +60,7 @@
   @import '~stylesheets/helpers/_variables.scss';
   @import '~stylesheets/helpers/mixins/style.scss';
 
-  .infos,
-  .link__home {
+  .infos {
     position: relative;
     margin: 20px 0 0 0;
     @include large {
