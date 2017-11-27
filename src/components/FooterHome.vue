@@ -2,7 +2,7 @@
   <footer class='footer'>
     <div class='container'>
       <div class='row'>
-        <div class='col-xs-12 col-sm-6 col-md-4'>
+        <div class='col-xs-12 col-sm-6 col-md-3'>
           <div class='footer__column'>
             <h4 class='footer__title'>Louer votre chapiteau</h4>
             <router-link :to='{name: "Contact"}' class='footer__link'>
@@ -13,10 +13,18 @@
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4'>
           <div class='footer__column footer--margin'>
-            <h4 class='footer__title'>Réseaux sociaux et partenaires</h4>
-            <a href='https://facebook.com' title='page facebook chapiteau location' class='footer__link'>logo facebook</a>
-            <a href='http://www.franckzavatta.com/' class='footer__link' title='franck zavatta'>Franck Zavatta, artiste de cirque</a>
+            <h4 class='footer__title'>Partenaires</h4>
+            <a href='http://www.franckzavatta.com/' class='footer__link' title='franck zavatta' target='_blank'>Franck Zavatta, artiste de cirque</a>
             <a href='http://www.locationdechapiteaux.org/' class='footer__link'>Location de chapiteau de cirque</a>
+          </div>
+        </div>
+        <div class='col-xs-12'>
+          <div class='footer__bottom'>
+            <router-link :to='{name: "Terms"}' class='footer__link' title="conditions d'utilisation">
+              Conditions d'utilisation
+            </router-link>
+            <span> - </span>
+            <a href='http://renanbronchart.com' title='site du développeur renan bronchart' class='footer__link' target='_blank'>All rights reserved © 2017</a>
           </div>
         </div>
       </div>
@@ -39,7 +47,7 @@
   .footer {
     background: $primary-indigo;
     color: white;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
     margin: 4rem 0 0 0;
   }
 
@@ -63,4 +71,10 @@
     color: white;
     padding: 0.8rem 0;
   }
+
+  .footer__bottom {
+    text-align: center;
+    margin: 2rem 0 0 0;
+  }
+
 </style>
