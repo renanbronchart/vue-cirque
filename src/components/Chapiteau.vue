@@ -13,17 +13,13 @@
       </div>
     </div>
     <div class='infos'>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <transition name='fade'>
-              <h3 class='infos__title'>{{newChapiteau.title}}</h3>
-            </transition>
-            <transition name='fade'>
-              <img :src="imageSrc" :alt="altImage" class='img--responsive infos__image'>
-            </transition>
+      <div class='container'>
+        <div class='flex infos__container'>
+          <div class='infos__illustration'>
+            <h3 class='infos__title'>{{newChapiteau.title}}</h3>
+            <img :src='imageSrc' :alt='altImage' class='img--responsive infos__image'>
           </div>
-          <div class="infos__description">
+          <div class='infos__description'>
             <p>{{newChapiteau.description}}</p>
           </div>
         </div>
@@ -74,23 +70,35 @@
     }
   }
 
+  .infos__container {
+    flex-direction: column;
+    @include large {
+      flex-direction: row;
+    }
+  }
+
   .infos__title {
     margin: 0 0 20px 0;
   }
 
+  .infos__illustration {
+    width: 100%;
+    @include large {
+      width: 70%;
+      min-width: 70%;
+    }
+  }
+
   .infos__description {
-    padding: 0 1rem;
     margin: 2rem 0 0 0;
     @include large {
-      width: 60%;
-      position: absolute;
-      top: 8rem;
-      right: 0;
+      width: 50%;
+      min-width: 50%;
       background: white;
       border-radius: $border-radius-xs;
-      transform: translateX(-40px);
+      transform: translate(-50%, 150px);
       box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
-      margin: 10rem 0 0 0;
+      margin: 10rem 0 150px 0;
       padding: 20px;
     }
   }
