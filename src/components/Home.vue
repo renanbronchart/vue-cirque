@@ -2,7 +2,7 @@
   <div>
     <HeaderHome :props='header'></HeaderHome>
     <div class="container">
-      <h3>Choisissez votre chapiteau à louer</h3>
+      <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
       <div class="row">
         <div class="col-xs-12 col-sm-6" v-for='(card, index) in cards'>
           <Card :props='card'>
@@ -35,7 +35,8 @@ export default {
 </script>
 
 <style lang='scss'>
-  .card {
-    margin: 0 0 20px 0;
+  .card,
+  .home__title {
+    margin: 2rem 0 0 0;
   }
 </style>

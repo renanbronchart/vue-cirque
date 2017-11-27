@@ -8,6 +8,7 @@
     <transition name='fade'>
       <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
     </transition>
+    <FooterHome></FooterHome>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import asideLinks from 'store/asideLinks.json'
 import 'stylesheets/style.scss'
 import NavHome from '@/components/NavHome.vue'
+import FooterHome from '@/components/FooterHome.vue'
 import AsideNav from '@/components/AsideNav.vue'
 
 export default {
@@ -37,7 +39,8 @@ export default {
   },
   components: {
     NavHome,
-    AsideNav
+    AsideNav,
+    FooterHome
   }
 }
 </script>
