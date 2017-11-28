@@ -17,7 +17,7 @@
       label: {
         type: String,
         default: 'Voir tous les chapiteaux'
-      },
+      }
     }
   }
 </script>
