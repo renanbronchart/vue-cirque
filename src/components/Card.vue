@@ -1,6 +1,6 @@
 <template>
-  <div class="card" :style="{backgroundImage: 'url(' + imageSrc + ')'}">
-    <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link'>
+  <div class="card" :style='styleBackground' :class='extraClass'>
+    <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link' v-if='displayBackground'>
       <div class="card__filter">
       </div>
       <div class="card__infos">
@@ -8,16 +8,35 @@
         <p>{{props.description}}</p>
       </div>
     </router-link>
+    <div v-else>
+      <h4 v-if='props.title'>{{props.title}}</h4>
+      <p>{{props.description}}</p>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'Card',
-    props: ['props'],
+    props: {
+      props: {
+        type: Object
+      },
+      displayBackground: {
+        default: false
+      },
+      extraClass: {
+        type: String,
+        default: ''
+      }
+    },
     data () {
       return {
-        imageSrc: `/static/${this.props.background}`
+      }
+    },
+    computed: {
+      styleBackground () {
+        return this.displayBackground ? `background-image: url('/static/${this.props.background}')` : ''
       }
     }
   }
@@ -37,9 +56,26 @@
     overflow: hidden;
     box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
     transition: all .2s ease-in-out;
-    &:hover {
-      box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
-      transform: translateY(-8px);
+    &.card--hover {
+      &:hover {
+        box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
+        transform: translateY(-8px);
+      }
+    }
+
+    &.card--description {
+      height: auto;
+      margin: 2rem 0 0 0;
+      @include large {
+        width: 50%;
+        min-width: 50%;
+        background: white;
+        border-radius: $border-radius-xs;
+        transform: translate(-50%, 150px);
+        box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+        margin: 10rem 0 150px 0;
+        padding: 20px;
+      }
     }
 
     .card__link {

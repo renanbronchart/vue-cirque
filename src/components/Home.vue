@@ -5,7 +5,7 @@
       <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
       <div class="row">
         <div class="col-xs-12 col-sm-6" v-for='(card, index) in cards'>
-          <Card :props='card'>
+          <Card :props='card' displayBackground='true' extraClass='card--hover'>
           </Card>
         </div>
       </div>

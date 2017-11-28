@@ -14,9 +14,7 @@
             <h3 class='infos__title'>{{newChapiteau.title}}</h3>
             <img :src='imageSrc' :alt='altImage' class='img--responsive infos__image'>
           </div>
-          <div class='infos__description'>
-            <p>{{newChapiteau.description}}</p>
-          </div>
+          <Card :props='newChapiteau' extraClass='card--description'></Card>
         </div>
       </div>
     </div>
@@ -24,6 +22,7 @@
 </template>
 
 <script>
+  import Card from '@/components/Card.vue'
   import cards from 'store/cards.json'
   import BackTo from '@/components/BackTo.vue'
 
@@ -51,7 +50,8 @@
       }
     },
     components: {
-      BackTo
+      BackTo,
+      Card
     }
   }
 </script>
@@ -84,20 +84,6 @@
     @include large {
       width: 70%;
       min-width: 70%;
-    }
-  }
-
-  .infos__description {
-    margin: 2rem 0 0 0;
-    @include large {
-      width: 50%;
-      min-width: 50%;
-      background: white;
-      border-radius: $border-radius-xs;
-      transform: translate(-50%, 150px);
-      box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
-      margin: 10rem 0 150px 0;
-      padding: 20px;
     }
   }
 </style>
