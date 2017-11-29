@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderHome :props='header'></HeaderHome>
+    <Presentation :presentationList='presentations'></Presentation>
     <div class="container">
       <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
       <div class="row">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import HeaderHome from '@/components/HeaderHome.vue'
+import Presentation from '@/components/Presentation.vue'
 import Card from '@/components/Card.vue'
 import cards from 'store/cards.json'
 import header from 'store/header.json'
@@ -24,12 +24,37 @@ export default {
   data () {
     return {
       cards,
-      header
+      presentations: [
+        {
+          iconName: 'security',
+          iconColor: 'gray',
+          iconClass: '',
+          displayIcon: 'true',
+          title: 'Paiement sécurisé',
+          description: 'Un paiement toujours sécurisé'
+        },
+        {
+          iconName: 'home',
+          iconColor: 'gray',
+          iconClass: '',
+          displayIcon: 'true',
+          title: 'Paiement sécurisé',
+          description: 'Un paiement toujours sécurisé'
+        },
+        {
+          iconName: 'local_shipping',
+          iconColor: 'gray',
+          iconClass: '',
+          displayIcon: 'true',
+          title: 'Paiement sécurisé',
+          description: 'Un paiement toujours sécurisé'
+        }
+      ]
     }
   },
   components: {
     Card,
-    HeaderHome
+    Presentation
   }
 }
 </script>

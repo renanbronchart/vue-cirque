@@ -38,14 +38,19 @@
   @import '~stylesheets/helpers/mixins/style.scss';
 
   .nav {
-    position: absolute;
+    position: relative;
     height: 12.5rem;
     background: $pesto-green;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     z-index: 2;
     &.nav--sticky {
+      width: 100%;
       position: fixed;
       top: -7.5rem;
+      left: 0;
+      & + .main {
+        margin: 12.5rem 0 0 0;
+      }
     }
   }
 

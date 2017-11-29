@@ -3,7 +3,9 @@
     <AsideNav :props='asideLinks' :active='sideBarOpen'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
     <transition name='fade'>
-      <router-view/>
+      <main class='main'>
+        <router-view/>
+      </main>
     </transition>
     <transition name='fade'>
       <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
@@ -46,23 +48,12 @@ export default {
 </script>
 
 <style lang='scss'>
-
-body {
-  padding: 4.5rem 0 0 0;
-}
-
 .app {
   min-height: calc(100vh - 4.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  overflow: hidden;
 }
 
 .filter {
