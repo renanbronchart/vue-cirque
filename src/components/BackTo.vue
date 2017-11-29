@@ -21,15 +21,3 @@
     }
   }
 </script>
-
-<style lang='scss' scoped>
-  @import '~stylesheets/helpers/_variables.scss';
-  @import '~stylesheets/helpers/mixins/style.scss';
-
-  .link__home {
-    margin: 20px 0 0 0;
-    @include large {
-      margin: 40px 0 0 0;
-    }
-  }
-</style>

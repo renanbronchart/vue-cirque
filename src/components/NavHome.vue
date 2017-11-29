@@ -77,6 +77,7 @@
     left: 0;
     line-height: 5rem;
     color: white;
+    margin: 0;
     @include medium {
       width: auto;
       text-align: left;
