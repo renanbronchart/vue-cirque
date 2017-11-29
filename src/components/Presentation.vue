@@ -2,7 +2,7 @@
   <div class='presentation'>
     <div class='container'>
       <div class='row'>
-        <div class='col-xs-12 col-md-4' v-for='(presentation, index) in presentationList' :class='{"column--border" : index !== 0}'>
+        <div class='col-xs-12 col-sm-4' v-for='(presentation, index) in presentationList' :class='{"column--border" : index !== 0}'>
           <div class='presentation__column'>
             <Icon :name='presentation.iconName' :color='presentation.iconColor' :extraClass='presentation.iconClass' v-if='presentation.displayIcon' class='presentation__icon'></Icon>
             <h3 class='presentation__title'>{{presentation.title}}</h3>
@@ -44,11 +44,17 @@
 
   .presentation__column {
     padding: 2rem;
-
+    transition: all .2s;
+    &:hover {
+      color: $red-secondary;
+      transform: translateY(-2px);
+    }
   }
 
   .column--border {
-    border-left: 1px solid $gray;
+    @include medium {
+      border-left: 1px solid $gray;
+    }
   }
 
 </style>

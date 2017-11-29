@@ -31,7 +31,6 @@ export default {
       presentations: [
         {
           iconName: 'security',
-          iconColor: 'gray',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
@@ -39,7 +38,6 @@ export default {
         },
         {
           iconName: 'home',
-          iconColor: 'gray',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
@@ -47,7 +45,6 @@ export default {
         },
         {
           iconName: 'local_shipping',
-          iconColor: 'gray',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
