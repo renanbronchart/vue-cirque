@@ -54,7 +54,6 @@
     }
   }
 
-
   .nav__menu {
     position: fixed;
     top: 0;

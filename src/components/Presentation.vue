@@ -44,10 +44,22 @@
 
   .presentation__column {
     padding: 2rem;
-    transition: all .2s;
-    &:hover {
+    .presentation__icon {
       color: $red-secondary;
-      transform: translateY(-2px);
+    }
+    @include medium {
+      &,
+      .presentation__icon {
+        transition: all .2s;
+        color: $gray-base;
+      }
+      &:hover,
+      &:hover .presentation__icon {
+        color: $red-secondary;
+      }
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 
