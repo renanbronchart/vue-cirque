@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="container">
+      <h2>Louer une tente pour tout vos évenements</h2>
+      <p>France Location conçoit, construit, aménage et décore des espaces éphémères pour vos événements depuis 50 ans. Que ce soit pour des événements professionnels ou privés, nos équipes sont à l’écoute de votre projet. Notre stock de matériel nous permet de répondre à une grande diversité d’événements. Nous proposons ainsi la location de tentes, chapiteaux et orangerie pour vos projets de mariages, réceptions, événements sportifs et culturels, événements d’entreprise, foires et salons mais aussi la location de structures et chapiteaux CTS pour vos besoins de stockage et d’agrandissement de surface.</p>
+    </div>
     <Presentation :presentationList='presentations'></Presentation>
     <div class="container">
       <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>

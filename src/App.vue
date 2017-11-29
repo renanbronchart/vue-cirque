@@ -56,6 +56,10 @@ export default {
   overflow: hidden;
 }
 
+.main {
+  padding: 4rem 0 0 0;
+}
+
 .filter {
   width: 100%;
   height: 100vh;
