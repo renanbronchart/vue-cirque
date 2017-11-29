@@ -1,43 +1,81 @@
 <template>
-  <nav class='nav'>
+  <nav class='nav' :class='stickyNav ? "nav--sticky" : ""'>
     <a class="nav__menu" title='open menu' @click.prevent='toggleMenu'><i class="nav__icon material-icons">menu</i></a>
+    <h1 class='nav__title'>Location de chapiteau</h1>
   </nav>
 </template>
 
 <script>
   export default {
     name: 'NavHome',
+    data () {
+      return {
+        stickyNav: false
+      }
+    },
     methods: {
       toggleMenu () {
         this.$emit('toggle')
+      },
+      addStickyNav () {
+        let posScrollWindow = window.scrollY
+        let posTitle = document.querySelector('.nav__title').offsetTop
+
+        this.stickyNav = posScrollWindow > posTitle
       }
-    }
+    },
+    created () {
+      window.addEventListener('scroll', this.addStickyNav)
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.addStickyNav)
+    },
   }
 </script>
 
 <style lang='scss'>
   @import '~stylesheets/helpers/_variables.scss';
+  @import '~stylesheets/helpers/mixins/style.scss';
 
   .nav {
-    height: 4.5rem;
+    position: absolute;
+    height: 200px;
     background: $pesto-green;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     z-index: 2;
+    &.nav--sticky {
+      position: fixed;
+      top: -120px;
+    }
   }
 
+
   .nav__menu {
-    height: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
     display: inline-block;
     cursor: pointer;
+    z-index: 5;
   }
 
   .nav__icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: white;
     padding: 1rem;
+  }
+
+  .nav__title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    line-height: 5rem;
+    @include medium {
+      width: auto;
+      text-align: left;
+      left: 10%;
+    }
   }
 </style>
