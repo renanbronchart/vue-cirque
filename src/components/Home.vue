@@ -32,7 +32,7 @@ export default {
         {
           iconName: 'security',
           iconColor: 'gray',
-          iconClass: '',
+          iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
           description: 'Un paiement toujours sécurisé'
@@ -40,7 +40,7 @@ export default {
         {
           iconName: 'home',
           iconColor: 'gray',
-          iconClass: '',
+          iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
           description: 'Un paiement toujours sécurisé'
@@ -48,7 +48,7 @@ export default {
         {
           iconName: 'local_shipping',
           iconColor: 'gray',
-          iconClass: '',
+          iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
           description: 'Un paiement toujours sécurisé'
