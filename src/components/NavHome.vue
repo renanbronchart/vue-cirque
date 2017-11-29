@@ -39,13 +39,13 @@
 
   .nav {
     position: absolute;
-    height: 200px;
+    height: 12.5rem;
     background: $pesto-green;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     z-index: 2;
     &.nav--sticky {
       position: fixed;
-      top: -120px;
+      top: -7.5rem;
     }
   }
 
@@ -70,8 +70,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    color: white;
     line-height: 5rem;
+    color: white;
     @include medium {
       width: auto;
       text-align: left;
