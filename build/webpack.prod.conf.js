@@ -119,8 +119,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     new PrerenderSpaPlugin(
-      path.join(__dirname, 'dist'),
-      [ '/', '/contact', '/chapiteau/1', '/chapiteau/2', '/chapiteau/3', '/chapiteau/4' ]
+      // Absolute path to compiled SPA
+      path.resolve(__dirname, '../dist'),
+      // List of routes to prerender
+      [ '/', '/chapiteau', '/chapiteau/1', '/chapiteau/2', '/chapiteau/3', '/chapiteau/4' ],
+      {
+        // options
+      }
     )
   ]
 })
