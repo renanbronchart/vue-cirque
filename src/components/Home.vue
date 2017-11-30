@@ -25,11 +25,9 @@
 </template>
 
 <script>
+import cards from 'store/cards.json'
 const Presentation = () => import('@/components/Presentation.vue')
 const Card = () => import('@/components/Card.vue')
-
-import cards from 'store/cards.json'
-import header from 'store/header.json'
 
 export default {
   name: 'Home',

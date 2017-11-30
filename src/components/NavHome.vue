@@ -29,7 +29,7 @@
     },
     destroyed () {
       window.removeEventListener('scroll', this.addStickyNav)
-    },
+    }
   }
 </script>
 

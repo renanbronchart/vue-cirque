@@ -8,13 +8,13 @@
             <router-link :to='{name: "Contact"}' class='footer__link'>
               Prendre contact
             </router-link>
-            <a href='http://www.francklocation.com/' title='franck location devis en ligne' target='_blank'class='footer__link'>Faire un devis en ligne</a>
+            <a href='http://www.francklocation.com/' title='franck location devis en ligne' target='_blank' rel='noopener noreferrer' class='footer__link'>Faire un devis en ligne</a>
           </div>
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4'>
           <div class='footer__column footer--margin'>
             <h4 class='footer__title'>Partenaires</h4>
-            <a href='http://www.franckzavatta.com/' class='footer__link' title='franck zavatta' target='_blank'>Franck Zavatta, artiste de cirque</a>
+            <a href='http://www.franckzavatta.com/' class='footer__link' title='franck zavatta' target='_blank' rel='noopener noreferrer' >Franck Zavatta, artiste de cirque</a>
             <a href='http://www.locationdechapiteaux.org/' class='footer__link'>Location de chapiteau de cirque</a>
           </div>
         </div>
@@ -24,7 +24,7 @@
               Conditions d'utilisation
             </router-link>
             <span> - </span>
-            <a href='http://renanbronchart.com' title='site du développeur renan bronchart' class='footer__link' target='_blank'>All rights reserved © 2017</a>
+            <a href='http://renanbronchart.com' title='site du développeur renan bronchart' class='footer__link' target='_blank' rel='noopener noreferrer' >All rights reserved © 2017</a>
           </div>
         </div>
       </div>

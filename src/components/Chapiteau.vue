@@ -25,9 +25,9 @@
 </template>
 
 <script>
+  import cards from 'store/cards.json'
   const Card = () => import('@/components/Card.vue')
   const BackTo = () => import('@/components/BackTo.vue')
-  import cards from 'store/cards.json'
 
   export default {
     name: 'chapiteau',

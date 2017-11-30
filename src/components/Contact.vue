@@ -9,8 +9,8 @@
 </template>
 
 <script>
-const BackTo = () => import('@/components/BackTo.vue')
 import mapboxgl from 'mapbox-gl'
+const BackTo = () => import('@/components/BackTo.vue')
 
 export default {
   data () {
@@ -28,7 +28,7 @@ export default {
       map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/renanbronchart/cjaiubug4a7se2sp7uikzmket',
-        center: [2.341,48.853],
+        center: [2.341, 48.853],
         zoom: 12,
         maxZoom: 12,
         minZoom: 12
