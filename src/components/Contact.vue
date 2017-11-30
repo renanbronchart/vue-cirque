@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import BackTo from '@/components/BackTo.vue'
+const BackTo = () => import('@/components/BackTo.vue')
 import mapboxgl from 'mapbox-gl'
 
 export default {

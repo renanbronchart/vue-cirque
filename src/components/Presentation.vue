@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import Icon from '@/components/molecules/Icon.vue'
+  const Icon = () => import('@/components/molecules/Icon.vue')
 
   export default {
     props: ['presentationList'],
@@ -46,20 +46,6 @@
     padding: 2rem;
     .presentation__icon {
       color: $red-secondary;
-    }
-    @include medium {
-      &,
-      .presentation__icon {
-        transition: all .2s;
-        color: $gray-base;
-      }
-      &:hover,
-      &:hover .presentation__icon {
-        color: $red-secondary;
-      }
-      &:hover {
-        transform: translateY(-2px);
-      }
     }
   }
 

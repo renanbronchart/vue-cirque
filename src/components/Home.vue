@@ -1,14 +1,21 @@
 <template>
   <div>
-    <div class="container">
-      <h2>Louer un chapiteau ou une tente pour tout vos évenements</h2>
-      <p>France Location conçoit, construit, aménage et décore des espaces éphémères pour vos événements depuis 50 ans. Que ce soit pour des événements professionnels ou privés, nos équipes sont à l’écoute de votre projet. Notre stock de matériel nous permet de répondre à une grande diversité d’événements. Nous proposons ainsi la location de tentes, chapiteaux et orangerie pour vos projets de mariages, réceptions, événements sportifs et culturels, événements d’entreprise, foires et salons mais aussi la location de structures et chapiteaux CTS pour vos besoins de stockage et d’agrandissement de surface.</p>
+    <div class='container'>
+      <h2>Louer un chapiteau de cirque ou une tente pour tout vos évenements</h2>
+      <p>Nous construisons, livrons, montons, et décorons nos propres chapiteaux pour des événements dans toute la france depuis plus de 10 ans. <br>
+        Mariage, anniversaire, réception, soirée dansante, nous sommes à l’écoute de tous vos projets. <br>Nous possédons deux camions capablent de vous livrez tout le materiel nécessaire partout dans l'hexagone, à n'importe quelle date. Vous pouvez ainsi louer vos chapiteaux et tentes pour votre mariage, réception, soirée en un rien de temps !
+        <br>
+        Pour vous faire gagner de l'argent, nous proposons que vous montiez vous-même un de nos chapiteau ou tente, avec la supervisation d'un maître monteur.
+      </p>
+      <h5>Appelez nous, votre chapiteau sera livré et monté aussitôt !</h5>
     </div>
     <Presentation :presentationList='presentations'></Presentation>
-    <div class="container">
+    <div class='container'>
       <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6" v-for='(card, index) in cards'>
+    </div>
+    <div class='container--xs'>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-6' v-for='(card, index) in cards'>
           <Card :props='card' displayBackground='true' extraClass='card--hover'>
           </Card>
         </div>
@@ -18,8 +25,9 @@
 </template>
 
 <script>
-import Presentation from '@/components/Presentation.vue'
-import Card from '@/components/Card.vue'
+const Presentation = () => import('@/components/Presentation.vue')
+const Card = () => import('@/components/Card.vue')
+
 import cards from 'store/cards.json'
 import header from 'store/header.json'
 
@@ -47,8 +55,8 @@ export default {
           iconName: 'local_shipping',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
-          title: 'Paiement sécurisé',
-          description: 'Un paiement toujours sécurisé'
+          title: 'Livraison rapide',
+          description: 'Dans toute la France, quelques jours avant votre évènement'
         }
       ]
     }
@@ -60,9 +68,17 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-  .card,
+<style lang='scss' scoped>
+  @import '~stylesheets/helpers/_variables.scss';
+  @import '~stylesheets/helpers/mixins/style.scss';
+
   .home__title {
-    margin: 2rem 0 0 0;
+    margin-top: 4rem;
+  }
+
+  .card {
+    @include medium {
+      margin: 0 0 2rem 0;
+    }
   }
 </style>

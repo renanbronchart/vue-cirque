@@ -5,12 +5,11 @@
       </div>
       <div class="card__infos">
         <h4>{{props.title}}</h4>
-        <p>{{props.description}}</p>
+        <!-- <p>{{props.description}}</p> -->
       </div>
     </router-link>
     <div v-else>
-      <h4 v-if='props.title'>{{props.title}}</h4>
-      <p>{{props.description}}</p>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -56,12 +55,6 @@
     overflow: hidden;
     box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
     transition: all .2s ease-in-out;
-    &.card--hover {
-      &:hover {
-        box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
-        transform: translateY(-8px);
-      }
-    }
 
     &.card--description {
       height: auto;
@@ -114,6 +107,13 @@
 
       .card__infos {
         transform: translateY(20px);
+      }
+
+      &.card--hover {
+        &:hover {
+          box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
+          transform: translateY(-8px);
+        }
       }
 
       &:hover {

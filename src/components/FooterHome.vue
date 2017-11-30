@@ -45,10 +45,10 @@
   @import '~stylesheets/helpers/mixins/style.scss';
 
   .footer {
-    background: $primary-indigo;
+    background: $blue-gray;
     color: white;
     padding: 2rem 0 1rem 0;
-    margin: 4rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
 
   .footer__column {

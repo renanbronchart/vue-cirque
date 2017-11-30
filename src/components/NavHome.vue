@@ -77,10 +77,12 @@
     line-height: 5rem;
     color: white;
     margin: 0;
+    padding: 0 0 0 20px;
     @include medium {
       width: auto;
       text-align: left;
       left: 10%;
+      padding: 0;
     }
   }
 </style>

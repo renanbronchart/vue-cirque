@@ -14,7 +14,10 @@
             <h3 class='infos__title'>{{newChapiteau.title}}</h3>
             <img :src='imageSrc' :alt='altImage' class='img--responsive infos__image'>
           </div>
-          <Card :props='newChapiteau' extraClass='card--description'></Card>
+          <Card extraClass='card--description'>
+            <h4 v-if='newChapiteau.title'>{{newChapiteau.title}}</h4>
+            <p>{{newChapiteau.description}}</p>
+          </Card>
         </div>
       </div>
     </div>
@@ -22,9 +25,9 @@
 </template>
 
 <script>
-  import Card from '@/components/Card.vue'
+  const Card = () => import('@/components/Card.vue')
+  const BackTo = () => import('@/components/BackTo.vue')
   import cards from 'store/cards.json'
-  import BackTo from '@/components/BackTo.vue'
 
   export default {
     name: 'chapiteau',

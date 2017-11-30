@@ -1,12 +1,18 @@
-.container-fluid,
+.container--fluid,
 .container {
   padding: 0 16px;
+}
+
+.container,
+.container--fluid,
+.container--xs {
   @include medium {
     padding: 0 32px;
   }
 }
 
-.container {
+.container,
+.container--xs {
   @include xlarge {
     max-width: $max-width-container;
     margin: auto;

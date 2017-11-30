@@ -2,11 +2,11 @@
   <div id="app" class='app'>
     <AsideNav :props='asideLinks' :active='sideBarOpen'></AsideNav>
     <NavHome @toggle='toggleSideBar'></NavHome>
-    <transition name='fade'>
-      <main class='main'>
+    <main class='main'>
+      <transition name='fade'>
         <router-view/>
-      </main>
-    </transition>
+      </transition>
+    </main>
     <transition name='fade'>
       <div class="filter" v-if='sideBarOpen' @click.prevent='closeSideBar'></div>
     </transition>
@@ -17,9 +17,10 @@
 <script>
 import asideLinks from 'store/asideLinks.json'
 import 'stylesheets/style.scss'
-import NavHome from '@/components/NavHome.vue'
-import FooterHome from '@/components/FooterHome.vue'
-import AsideNav from '@/components/AsideNav.vue'
+
+const NavHome = () => import('@/components/NavHome.vue')
+const FooterHome = () => import('@/components/FooterHome.vue')
+const AsideNav = () => import('@/components/AsideNav.vue')
 
 export default {
   name: 'app',

@@ -6,68 +6,71 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: $font-family-title;
   font-weight: 400;
   text-overflow: ellipsis;
-  margin: 0 0 0.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
 }
 
 h1, .h1 {
-  @include font-size(2rem);
+  @include font-size(2.1rem);
   @include medium {
-    @include font-size(2.4rem);
+    @include font-size(2.3rem);
   }
   @include large {
-    @include font-size(2.8rem);
+    @include font-size(2.7rem);
   }
 }
 
 h2, .h2 {
+  @include font-size(1.9rem);
+  @include medium {
+    @include font-size(2rem);
+  }
+  @include large {
+    @include font-size(2.1rem);
+  }
+}
+
+h3, .h3 {
   @include font-size(1.7rem);
   @include medium {
     @include font-size(1.8rem);
   }
   @include large {
-    @include font-size(1.9rem);
-  }
-}
-
-h3, .h3 {
-  @include font-size(1.5rem);
-  @include medium {
-    @include font-size(1.6rem);
-  }
-  @include large {
-    @include font-size(1.8rem);
+    @include font-size(2rem);
   }
 }
 
 h4, .h4 {
+  @include font-size(1.4rem);
+  @include medium {
+    @include font-size(1.5rem);
+  }
+  @include large {
+    @include font-size(1.7rem);
+  }
+}
+
+h5, .h5 {
   @include font-size(1.2rem);
   @include medium {
-    @include font-size(1.3rem);
+    @include font-size(1.4rem);
   }
   @include large {
     @include font-size(1.5rem);
   }
 }
 
-h5, .h5 {
-  @include font-size(1rem);
-  @include medium {
-    @include font-size(1.2rem);
-  }
-  @include large {
-    @include font-size(1.3rem);
-  }
-}
-
 p, .p {
-  @include font-size(0.9rem);
+  @include font-size(1rem);
   font-family: $font-family-base;
   font-weight: normal;
   @include medium {
-    @include font-size(1rem);
+    @include font-size(1.1rem);
   }
   @include large {
-    @include font-size(1.1rem);
+    @include font-size(1.2rem);
   }
 }
 
@@ -78,7 +81,7 @@ a, a:visited {
   font-weight: 700;
   &:hover,
   &:active {
-    color: darken($gray-base, 20);
+    // color: darken($gray-base, 20);
   }
 
 }
