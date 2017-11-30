@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import Home from '@/components/Home'
-import Contact from '@/components/Contact'
-import Chapiteau from '@/components/Chapiteau'
+
+const Home = () => import('@/components/Home')
+const Contact = () => import('@/components/Contact')
+const Chapiteau = () => import('@/components/Chapiteau')
 
 Vue.use(Router)
 
