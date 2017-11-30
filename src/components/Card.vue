@@ -46,7 +46,6 @@
   @import '~stylesheets/helpers/mixins/style.scss';
 
   .card {
-    height: 300px;
     position: relative;
     border-radius: $border-radius-xs;
     background-size: cover;

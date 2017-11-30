@@ -74,7 +74,12 @@ export default {
     margin-top: 4rem;
   }
 
+  .presentation {
+    margin: 4rem 0 0 0;
+  }
+
   .card {
+    height: 300px;
     @include medium {
       margin: 0 0 2rem 0;
     }
