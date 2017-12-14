@@ -4,7 +4,7 @@
       <BackTo></BackTo>
       <h3 class='page__title'>Contact</h3>
     </div>
-    <div id='map' class='map'></div>
+    <img src="/static/card.png" alt="card location" class='map'>
     <div class="container">
       <Card class='contact__card'>
         <Presentation :presentationList='presentations'></Presentation>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import mapboxgl from 'mapbox-gl'
 const BackTo = () => import('@/components/BackTo.vue')
 const Card = () => import('@/components/Card.vue')
 const Presentation = () => import('@/components/Presentation.vue')
@@ -29,7 +28,7 @@ export default {
           displayIcon: 'true',
           linkHref: 'tel:+33666351155',
           title: 'Par téléphone',
-          description: '+33666351155',
+          description: '+33666351155'
         },
         {
           iconName: 'email',
@@ -47,27 +46,6 @@ export default {
           description: 'SARL Zanel,  23 rue Jean Jacques Rousseau, 75001 Paris'
         }
       ]
-    }
-  },
-  mounted () {
-    this.createMap()
-  },
-  methods: {
-    createMap: function () {
-      let map = this.map
-
-      mapboxgl.accessToken = 'pk.eyJ1IjoicmVuYW5icm9uY2hhcnQiLCJhIjoiY2o5OW82cG1jMHdxZTMzcXRxbThnczZuMSJ9.zrdXIR4UBPh8195XRQPLtQ'
-
-      map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/renanbronchart/cjaiubug4a7se2sp7uikzmket',
-        center: [2.322, 48.853],
-        zoom: 12,
-        maxZoom: 12,
-        minZoom: 12
-      })
-
-      map.scrollZoom.disable()
     }
   },
   components: {
@@ -96,13 +74,24 @@ export default {
   }
 
   .map {
-    min-height: 350px;
+    min-width: 100%;
     height: 45vh;
+    min-height: 350px;
+    transform: translateX(-40%);
     margin: 2rem 0 0 0;
-  }
-
-  .mapboxgl-control-container {
-    display: none;
+    @include medium {
+      transform: translateX(-20%);
+    }
+    @include large {
+      transform: translateX(-10%);
+    }
+    @include xlarge {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 0;
+      transform: translateX(0);
+    }
   }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <nav class='nav' :class='stickyNav ? "nav--sticky" : ""'>
-    <a class="nav__menu" title='open menu' @click.prevent='toggleMenu'><i class="nav__icon material-icons">menu</i></a>
+    <a class="nav__menu" title='open menu' @click.prevent='toggleMenu'><i class="nav__icon material-icons icn__xl">menu</i></a>
     <h1 class='nav__title'>Location de chapiteau</h1>
   </nav>
 </template>
@@ -63,7 +63,6 @@
   }
 
   .nav__icon {
-    font-size: 3rem;
     color: white;
     padding: 1rem;
   }

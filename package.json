@@ -15,15 +15,12 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "mapbox-gl": "^0.42.2",
     "prerender-spa-plugin": "^2.1.0",
     "save": "^2.3.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
-  },
-  "devDependencies": {
+    "vuex-router-sync": "^5.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -75,7 +72,10 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-plugin-critical": "^1.0.0"
+  },
+  "devDependencies": {
   },
   "jest": {
     "moduleFileExtensions": [

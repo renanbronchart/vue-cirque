@@ -6,11 +6,13 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: {
-    'App': () => import('./App')
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  new Vue({
+    el: '#app',
+    router,
+    template: '<App/>',
+    components: {
+      'App': () => import('./App')
+    }
+  })
 })
