@@ -1,6 +1,6 @@
 <template>
   <div class="card" :style='styleBackground' :class='extraClass'>
-    <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link' v-if='displayBackground'>
+    <router-link :to="{ name: props.linkName, params: { id: props.id }}" class='card__link' v-if='displayLink'>
       <div class="card__filter">
       </div>
       <div class="card__infos">
@@ -9,7 +9,14 @@
       </div>
     </router-link>
     <div v-else>
-      <slot></slot>
+      <slot>
+        <div class="card__filter">
+        </div>
+        <div class="card__infos">
+          <h4>{{props.title}}</h4>
+          <!-- <p>{{props.description}}</p> -->
+        </div>
+      </slot>
     </div>
   </div>
 </template>
@@ -24,6 +31,9 @@
       displayBackground: {
         default: false
       },
+      displayLink: {
+        default: false
+      },
       extraClass: {
         type: String,
         default: ''
@@ -35,7 +45,7 @@
     },
     computed: {
       styleBackground () {
-        return this.displayBackground ? `background-image: url('/static/${this.props.background}')` : ''
+        return this.displayBackground || this.displayLink ? `background-image: url('${this.props.background}')` : ''
       }
     }
   }
@@ -109,13 +119,15 @@
       }
 
       &.card--hover {
-        &:hover {
+        &:hover,
+        &.card--displayHover {
           box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
           transform: translateY(-8px);
         }
       }
 
-      &:hover {
+      &:hover,
+      &.card--displayHover {
         .card__filter {
           opacity: 0.6;
         }

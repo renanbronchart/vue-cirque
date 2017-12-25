@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "title": "Chauffage",
+    "description": "Un chauffage pour votre chapiteau ou tente",
+    "background": "/static/chauffage.png"
+  },
+  {
+    "id": "1",
+    "title": "Chaises",
+    "description": "Des chaise de réceptions",
+    "background": "/static/chaise.png"
+  },
+  {
+    "id": "2",
+    "title": "Plancher",
+    "description": "Un plancher pour un chapiteau",
+    "background": "/static/plancher.png"
+  },
+  {
+    "id": "3",
+    "title": "Toilettes",
+    "description": "Des toilettes dans une caravane ",
+    "background": "/static/toilettes.png"
+  }
+]

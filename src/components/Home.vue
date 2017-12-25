@@ -16,8 +16,19 @@
     <div class='container--xs'>
       <div class='row'>
         <div class='col-xs-12 col-sm-6' v-for='(card, index) in cards'>
-          <Card :props='card' displayBackground='true' extraClass='card--hover'>
+          <Card :props='card' displayLink='true' extraClass='card--hover'>
           </Card>
+        </div>
+      </div>
+    </div>
+
+    <div class='container'>
+      <h3 class='home__title'>Nos accessories pour chapiteaux</h3>
+    </div>
+    <div class="container--xs">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3" v-for="(accessorie, index) in accessories">
+          <Card :props='accessorie' extraClass='card--hover card--displayHover' displayBackground='true'></Card>
         </div>
       </div>
     </div>
@@ -26,14 +37,17 @@
 
 <script>
 import cards from 'store/cards.json'
+import accessories from 'store/accessories.json'
 const Presentation = () => import('@/components/Presentation.vue')
 const Card = () => import('@/components/Card.vue')
+const ImageResponsive = () => import('@/components/ImageResponsive.vue')
 
 export default {
   name: 'Home',
   data () {
     return {
       cards,
+      accessories,
       presentations: [
         {
           iconName: 'security',
@@ -61,6 +75,7 @@ export default {
   },
   components: {
     Card,
+    ImageResponsive,
     Presentation
   }
 }
