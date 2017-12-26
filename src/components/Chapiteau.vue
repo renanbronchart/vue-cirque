@@ -45,7 +45,7 @@
       },
 
       imageSrc () {
-        return `/static/${this.newChapiteau.background}`
+        return this.newChapiteau.background
       },
 
       newChapiteau () {

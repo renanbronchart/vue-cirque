@@ -20,6 +20,9 @@
           </Card>
         </div>
       </div>
+      <div class="text--center">
+        <ButtonMaterial label="Réservez votre chapiteau" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
+      </div>
     </div>
 
     <div class='container'>
@@ -28,8 +31,11 @@
     <div class="container--xs">
       <div class="row">
         <div class="col-xs-12 col-sm-3" v-for="(accessorie, index) in accessories">
-          <Card :props='accessorie' extraClass='card--hover card--displayHover' displayBackground='true'></Card>
+          <ImageResponsive :linkHref="accessorie.linkHref" :description="accessorie.description"></ImageResponsive>
         </div>
+      </div>
+      <div class="text--center">
+        <ButtonMaterial label="Réservez vos accessoires" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
       </div>
     </div>
   </div>
@@ -41,6 +47,7 @@ import accessories from 'store/accessories.json'
 const Presentation = () => import('@/components/Presentation.vue')
 const Card = () => import('@/components/Card.vue')
 const ImageResponsive = () => import('@/components/ImageResponsive.vue')
+const ButtonMaterial = () => import('@/components/molecules/ButtonMaterial.vue')
 
 export default {
   name: 'Home',
@@ -60,8 +67,8 @@ export default {
           iconName: 'home',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
-          title: 'Paiement sécurisé',
-          description: 'Un paiement toujours sécurisé'
+          title: 'Montage professionnel',
+          description: 'Possibilité de montage par nos soins'
         },
         {
           iconName: 'local_shipping',
@@ -76,7 +83,8 @@ export default {
   components: {
     Card,
     ImageResponsive,
-    Presentation
+    Presentation,
+    ButtonMaterial
   }
 }
 </script>

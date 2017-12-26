@@ -10,12 +10,6 @@
     </router-link>
     <div v-else>
       <slot>
-        <div class="card__filter">
-        </div>
-        <div class="card__infos">
-          <h4>{{props.title}}</h4>
-          <!-- <p>{{props.description}}</p> -->
-        </div>
       </slot>
     </div>
   </div>
@@ -119,8 +113,7 @@
       }
 
       &.card--hover {
-        &:hover,
-        &.card--displayHover {
+        &:hover {
           box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 1.5px rgba(0, 0, 0, 0.12), 0 4px 5px 0.5px rgba(0, 0, 0, 0.14);
           transform: translateY(-8px);
         }
