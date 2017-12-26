@@ -9,3 +9,7 @@ body {
 .container {
   max-width: $max-width-container;
 }
+
+section.section + section.section {
+  margin: 2rem auto 0 auto;
+}
