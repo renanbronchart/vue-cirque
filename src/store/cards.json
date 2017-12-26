@@ -4,34 +4,34 @@
     "title": "Le Vintage",
     "description": "À l'ancienne",
     "linkName": "Chapiteau",
-    "background": "LeVintage.jpg"
+    "background": "/static/LeVintage.jpg"
   },
   {
     "id": "1",
     "title": "Le Long",
     "description": "Etiam vitae lectus posuere neque fringilla porta id suscipit urna. Mauris vel libero eget purus vestibulum luctus. Vivamus at ipsum mauris. Phasellus mollis sed mauris vitae aliquet. Proin ultrices, orci sit amet consectetur congue, neque nisi efficitur felis, id vulputate lectus mi eu metus. In id pharetra est. Vestibulum fermentum fermentum neque quis auctor. Integer mollis ipsum ac nisi interdum, eu varius est vestibulum. Sed varius risus ut tellus accumsan, vel varius erat dictum. Cras posuere lectus justo, vitae ornare urna pharetra nec. Nullam ullamcorper diam ut nisl sodales sagittis. Nunc ultricies magna id est venenatis blandit. Sed diam felis, mollis ac molestie sed, mattis eu sapien. Nunc malesuada quam ligula, et porta ligula tempor ut. Proin eget scelerisque eros, quis placerat massa. Quisque pulvinar purus et metus pulvinar, at viverra justo aliquet. Morbi nec pretium lorem. Nunc accumsan porta rhoncus. Sed et purus a turpis sollicitudin imperdiet. Morbi eget tempus ex, ullamcorper ullamcorper mauris. Duis volutpat tristique diam ut mollis. Donec faucibus placerat arcu, et consequat eros elementum et. Ut mattis pellentesque neque, sed lacinia urna ullamcorper nec. Sed hendrerit neque diam, sit amet porttitor nunc ullamcorper id. Suspendisse viverra porttitor massa ac varius. Duis a mi lacus. Ut fringilla varius mi, vel convallis neque maximus at. Curabitur arcu est, vulputate non eros in, rutrum accumsan libero.",
     "linkName": "Chapiteau",
-    "background": "leLong.jpg"
+    "background": "/static/leLong.jpg"
   },
   {
     "id": "2",
     "title": "Le Paradis",
     "description": "Le paradis des chapiteaux",
     "linkName": "Chapiteau",
-    "background": "LeParadis.jpg"
+    "background": "/static/LeParadis.jpg"
   },
   {
     "id": "3",
     "title": "New Generation",
     "description": "La toute nouvelle génération des chapiteaux",
     "linkName": "Chapiteau",
-    "background": "newGeneration.jpg"
+    "background": "/static/newGeneration.jpg"
   },
   {
     "id": "4",
     "title": "Le Zig Zag",
     "description": "En avant !!",
     "linkName": "Chapiteau",
-    "background": "zigZag.jpg"
+    "background": "/static/zigZag.jpg"
   }
 ]

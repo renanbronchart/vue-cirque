@@ -40,7 +40,7 @@
   .nav {
     position: relative;
     height: 12.5rem;
-    background: $pesto-green;
+    background: $red-material;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     z-index: 2;
     &.nav--sticky {
