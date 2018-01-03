@@ -20,10 +20,10 @@
         </div>
         <div class='col-xs-12'>
           <div class='footer__bottom'>
-            <router-link :to='{name: "Terms"}' class='footer__link' title="conditions d'utilisation">
+<!--             <router-link :to='{name: "Terms"}' class='footer__link' title="conditions d'utilisation">
               Conditions d'utilisation
-            </router-link>
-            <span> - </span>
+            </router-link> -->
+            <!-- <span> - </span> -->
             <a href='http://renanbronchart.com' title='site du développeur renan bronchart' class='footer__link' target='_blank' rel='noopener noreferrer' >All rights reserved © 2017</a>
           </div>
         </div>

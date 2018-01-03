@@ -38,7 +38,7 @@
       <div class="container--xs">
         <div class="row">
           <div class="col-xs-12 col-sm-3" v-for="(accessorie, index) in accessories">
-            <ImageResponsive :linkHref="accessorie.linkHref" :description="accessorie.description"></ImageResponsive>
+            <ImageResponsive :linkHref="accessorie.linkHref" :description="accessorie.description" class="section__accessories"></ImageResponsive>
           </div>
         </div>
         <div class="text--center">
@@ -115,6 +115,13 @@ export default {
 
   .presentation {
     margin: 4rem 0 0 0;
+  }
+
+  .section__accessories {
+    margin: 0;
+    @include medium {
+      margin: 0 0 1.5rem 0;
+    }
   }
 
   .card {
