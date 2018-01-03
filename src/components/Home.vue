@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="section container--xs">
-      <ImageResponsive linkHref="/static/grand-chapiteau.jpg" description="Un grand chapiteau de cirque"></ImageResponsive>
+      <ImageResponsive linkHref="/static/grand-chapiteau.jpg" description="Un grand chapiteau de cirque" class="banner__home"></ImageResponsive>
     </section>
     <section class='container section'>
       <h2>Louer un chapiteau de cirque ou une tente pour tout vos évenements</h2>
@@ -101,6 +101,13 @@ export default {
 <style lang='scss' scoped>
   @import '~stylesheets/helpers/_variables.scss';
   @import '~stylesheets/helpers/mixins/style.scss';
+
+  .banner__home {
+    margin: -4rem 0 0 0;
+    @include medium {
+      margin: 0;
+    }
+  }
 
   .home__title {
     margin-top: 4rem;
