@@ -4,7 +4,7 @@
       <div class='row'>
         <div class='col-xs-12 col-sm-6 col-md-3'>
           <div class='footer__column'>
-            <h4 class='footer__title'>Louer votre chapiteau</h4>
+            <h4 class='footer__title'>Plus de renseignements</h4>
             <router-link :to='{name: "Contact"}' class='footer__link'>
               Prendre contact
             </router-link>

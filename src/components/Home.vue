@@ -70,14 +70,14 @@ export default {
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
-          description: 'Un paiement toujours sécurisé'
+          description: 'Paiement de la location toujours sécurisé'
         },
         {
           iconName: 'home',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Montage professionnel',
-          description: 'Possibilité de montage par nos soins'
+          description: 'Possibilité de montage du chapiteau par nos soins'
         },
         {
           iconName: 'local_shipping',

@@ -7,9 +7,11 @@
       <li v-for='section in props' class='section'>
         <h5 class='section__title'>{{section.title}}</h5>
         <ul class='section__links'>
-          <router-link :to="{ name: link.pageName, params: { id: link.id }}" :title="link.titleLink" class='section__link' v-for='link in section.links'>
-            {{link.labelLink}}
-          </router-link>
+          <li v-for='link in section.links'>
+            <router-link :to="{ name: link.pageName, params: { id: link.id }}" :title="link.titleLink" class='section__link'>
+              {{link.labelLink}}
+            </router-link>
+          </li>
         </ul>
       </li>
     </ul>

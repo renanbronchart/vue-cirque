@@ -16,7 +16,7 @@
           </div>
           <Card extraClass='card--description'>
             <div class="card--section">
-              <h4 v-if='newChapiteau.title'>{{newChapiteau.title}}</h4>
+              <h4 v-if='newChapiteau.title'>Description</h4>
               <p>{{newChapiteau.description}}</p>
             </div>
             <div class="card--section">
