@@ -7,6 +7,7 @@ const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin")
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
@@ -124,9 +125,35 @@ const webpackConfig = merge(baseWebpackConfig, {
       // List of routes to prerender
       [ '/', '/chapiteau', '/chapiteau/1', '/chapiteau/2', '/chapiteau/3', '/chapiteau/4' ],
       {
-        // options
+        postProcessHtml: function (context) {
+          var titles = {
+            '/': 'Location de chapiteau - location dans toute la france',
+            '/chapiteau/0': 'Location de chapiteau - chapiteau Le Vintage',
+            '/chapiteau/1': 'Location de chapiteau - chapiteau Le Long',
+            '/chapiteau/2': 'Location de chapiteau - chapiteau Le Paradis',
+            '/chapiteau/3': 'Location de chapiteau - chapiteau New Generation',
+            '/chapiteau/4': 'Location de chapiteau - chapiteau Le Zig Zag'
+          }
+          return context.html.replace(
+            /<title>[^<]*<\/title>/i,
+            '<title>' + titles[context.route] + '</title>'
+          )
+        }
       }
-    )
+    ),
+    new HtmlCriticalPlugin({
+      base: path.join(path.resolve(__dirname), '../dist/'),
+      src: 'index.html',
+      dest: 'index.html',
+      inline: true,
+      minify: true,
+      extract: true,
+      width: 375,
+      height: 565,
+      penthouse: {
+        blockJSRequests: false,
+      }
+    })
   ]
 })
 

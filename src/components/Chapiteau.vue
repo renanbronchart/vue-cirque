@@ -15,8 +15,18 @@
             <img :src='imageSrc' :alt='altImage' class='img--responsive infos__image'>
           </div>
           <Card extraClass='card--description'>
-            <h4 v-if='newChapiteau.title'>{{newChapiteau.title}}</h4>
-            <p>{{newChapiteau.description}}</p>
+            <div class="card--section">
+              <h4 v-if='newChapiteau.title'>Description</h4>
+              <p>{{newChapiteau.description}}</p>
+            </div>
+            <div class="card--section">
+              <h4 v-if='newChapiteau.price'>Prix</h4>
+              <p>{{newChapiteau.price}}</p>
+            </div>
+            <div class="card--section">
+              <h4 v-if='newChapiteau.dimensions'>Dimensions</h4>
+              <p>{{newChapiteau.dimensions}}</p>
+            </div>
           </Card>
         </div>
       </div>
@@ -69,6 +79,11 @@
     @include large {
       margin: 40px 0 0 0;
     }
+  }
+
+
+  .card--section + .card--section {
+    margin-top: 2rem;
   }
 
   .infos__container {

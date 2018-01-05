@@ -62,6 +62,7 @@
     &.card--description {
       height: auto;
       margin: 2rem 0 0 0;
+      box-shadow: none;
       @include large {
         width: 50%;
         min-width: 50%;

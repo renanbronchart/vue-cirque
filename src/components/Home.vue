@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class='container'>
+    <section class="section container--xs">
+      <ImageResponsive linkHref="/static/grand-chapiteau.jpg" description="Un grand chapiteau de cirque" class="banner__home"></ImageResponsive>
+    </section>
+    <section class='container section'>
       <h2>Louer un chapiteau de cirque ou une tente pour tout vos évenements</h2>
       <p>Nous construisons, livrons, montons, et décorons nos propres chapiteaux pour des événements dans toute la france depuis plus de 10 ans. <br>
         Mariage, anniversaire, réception, soirée dansante, nous sommes à l’écoute de tous vos projets. <br>Nous possédons deux camions capablent de vous livrez tout le materiel nécessaire partout dans l'hexagone, à n'importe quelle date. Vous pouvez ainsi louer vos chapiteaux et tentes pour votre mariage, réception, soirée en un rien de temps !
@@ -8,36 +11,42 @@
         Pour vous faire gagner de l'argent, nous proposons que vous montiez vous-même un de nos chapiteau ou tente, avec la supervisation d'un maître monteur.
       </p>
       <h5>Appelez nous, votre chapiteau sera livré et monté aussitôt !</h5>
-    </div>
-    <Presentation :presentationList='presentations'></Presentation>
-    <div class='container'>
-      <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
-    </div>
-    <div class='container--xs'>
-      <div class='row'>
-        <div class='col-xs-12 col-sm-6' v-for='(card, index) in cards'>
-          <Card :props='card' displayLink='true' extraClass='card--hover'>
-          </Card>
+    </section>
+    <section class="section">
+      <Presentation :presentationList='presentations'></Presentation>
+    </section>
+    <section class="section">
+      <div class='container'>
+        <h3 class='home__title'>Choisissez votre chapiteau à louer</h3>
+      </div>
+      <div class='container--xs'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-6' v-for='(card, index) in cards'>
+            <Card :props='card' displayLink='true' extraClass='card--hover'>
+            </Card>
+          </div>
+        </div>
+        <div class="text--center">
+          <ButtonMaterial label="Réservez votre chapiteau" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
         </div>
       </div>
-      <div class="text--center">
-        <ButtonMaterial label="Réservez votre chapiteau" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
+    </section>
+    <section class="section">
+      <div class='container'>
+        <h3 class='home__title'>Nos accessories pour chapiteaux</h3>
       </div>
-    </div>
+      <div class="container--xs">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3" v-for="(accessorie, index) in accessories">
+            <ImageResponsive :linkHref="accessorie.linkHref" :description="accessorie.description" class="section__accessories"></ImageResponsive>
+          </div>
+        </div>
+        <div class="text--center">
+          <ButtonMaterial label="Réservez vos accessoires" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
+        </div>
+      </div>
+    </section>
 
-    <div class='container'>
-      <h3 class='home__title'>Nos accessories pour chapiteaux</h3>
-    </div>
-    <div class="container--xs">
-      <div class="row">
-        <div class="col-xs-12 col-sm-3" v-for="(accessorie, index) in accessories">
-          <ImageResponsive :linkHref="accessorie.linkHref" :description="accessorie.description"></ImageResponsive>
-        </div>
-      </div>
-      <div class="text--center">
-        <ButtonMaterial label="Réservez vos accessoires" href="http://www.francklocation.com/wizard/step1.php"></ButtonMaterial>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -61,14 +70,14 @@ export default {
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Paiement sécurisé',
-          description: 'Un paiement toujours sécurisé'
+          description: 'Paiement de la location toujours sécurisé'
         },
         {
           iconName: 'home',
           iconClass: 'icn__xxl',
           displayIcon: 'true',
           title: 'Montage professionnel',
-          description: 'Possibilité de montage par nos soins'
+          description: 'Possibilité de montage du chapiteau par nos soins'
         },
         {
           iconName: 'local_shipping',
@@ -93,12 +102,26 @@ export default {
   @import '~stylesheets/helpers/_variables.scss';
   @import '~stylesheets/helpers/mixins/style.scss';
 
+  .banner__home {
+    margin: -4rem 0 0 0;
+    @include medium {
+      margin: 0;
+    }
+  }
+
   .home__title {
     margin-top: 4rem;
   }
 
   .presentation {
     margin: 4rem 0 0 0;
+  }
+
+  .section__accessories {
+    margin: 0;
+    @include medium {
+      margin: 0 0 1.5rem 0;
+    }
   }
 
   .card {

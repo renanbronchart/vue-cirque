@@ -33,5 +33,16 @@
         "labelLink": "Le ZigZag"
       }
     ]
+  },
+  {
+    "title": "Découvrir",
+    "links": [
+      {
+        "id": "0",
+        "pageName": "Home",
+        "titleLink": "Page d'accueil",
+        "labelLink": "Page d'accueil"
+      }
+    ]
   }
 ]
